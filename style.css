@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    font-family: "Montserrat", helvetica, arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: black;
+}
+.movie-card{
+    width: 70%;
+    height: 55vh;
+    margin: 9vh 0px;
+    border-radius: 10px;
+    transition: all 0.4s;
+    display: flex;
+}
+.blank{
+    display: none;
+}
+
+.inner-div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(15, 15, 15, 1);
+    height: 100%;
+    width: 50%;
+    color: #fff;
+    box-shadow: 10px 0px 60px 65px rgb(15 15 15);
+    padding: 25px;
+}
+
+
+img{
+    width: 110px;
+    height: 150px;
+}
+
+.head{
+    display: flex;
+}
+
+.right{
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right h1, h4, span, p{
+    font-weight: 400;
+    font-family: "Montserrat", helvetica, arial, sans-serif;
+    margin: 3px 0px;
+}
+
+.minutes{
+    color: rgb(133, 133, 247);
+    border: 1px solid rgb(133, 133, 247);
+    width: 80px;
+    text-align: center;
+    height: 25px;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.inner-div p{
+    margin: 10px 0px;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    align-items: center;
+    height: 15%;
+    margin-top: 10px;
+}
+button{
+    outline: none;
+    width: 10vw;
+    color: #fff;
+    background: none;
+    letter-spacing: 2px;
+    height: 30px;
+    border: 1px solid #fff;
+    padding: 5px;
+    margin: 0px 10px;
+    text-transform: uppercase;
+}
+button:hover{
+    cursor: pointer;
+}
+
+#bright{
+    background-image: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 80px 10px red;
+    overflow: hidden;
+}
+
+#tomb{
+    background-image: url("https://fsmedia.imgix.net/cd/c9/5e/ba/4817/4d9a/93f0/c776ec32ecbc/lara-crofts-neck-looks-unnatural-in-the-new-poster-for-tomb-raider.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 80px 10px aqua;       
+    overflow: hidden;                                                                             
+}
+
+#black{
+    background-image: url("https://www.gannett-cdn.com/-mm-/c03fd140debe8ad4c05cf81a5cad7ad61a12ce52/c=0-1580-2985-3266&r=x803&c=1600x800/local/-/media/2017/06/09/USATODAY/USATODAY/636326272873599176-Black-Panther-Teaser.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 80px 10px goldenrod; 
+    overflow: hidden;   
+}
+
+.movie-card:hover{
+    transform: scale(1.2);
+    transition: all 0.4s;
+}
+
+@media (max-width: 1100px) and (min-width: 900px){
+    .inner-div {
+        width: 60%;
+    }
+    .movie-card{
+        width: 80%;
+    }
+    .movie-card:hover{
+        transform: scale(1.09);
+        transition: all 0.4s;
+    }
+}
+
+@media (max-width: 900px){
+    .blank{
+        display: block;
+        width: 100%;
+        height: 60%;
+        background: none;
+    }
+    .movie-card{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        height: 70vh;
+    }
+    .inner-div{
+        height: 40%;
+        width: 100%;
+    }
+    .movie-card:hover{
+        transform: scale(1.1);
+        transition: all 0.4s;
+    }
+    .head{
+        position: relative;
+        top: -150px;
+    }
+    .content{
+        position: relative;
+        top: -150px;
+    }
+    .btn{
+        position: relative;
+        top: -150px;
+    }
+    button{
+        width: 20vw;
+    }
+}
+
+@media (max-width: 500px){
+    .movie-card{
+        height: 90vh;
+    }
+    .head{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    } 
+    .head{
+        position: relative;
+        top: -170px;
+    }
+    .content{
+        position: relative;
+        top: -170px;
+    }
+    .btn{
+        position: relative;
+        top: -170px;
+    }
+}
